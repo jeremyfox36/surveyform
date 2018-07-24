@@ -1,0 +1,3 @@
+.equal-width label{
+    min-width: 200px /* set this to max width of your label text */
+  }
