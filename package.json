@@ -12,14 +12,12 @@
     "semantic-ui": "^2.3.3"
   },
   "devDependencies": {
-    "git": "^0.1.5",
     "git-scripts": "^0.2.1",
-    "scripts": "^0.1.0",
     "surge": "^0.20.1"
   },
   "git": {
     "scripts": {
-      "pre-push": "surge --project ./ --domain https://piratesurvey.surge.sh/"
+      "pre-push": "surge --project ./ --domain https://piratesurvey.surge.sh"
     }
   }
 }
