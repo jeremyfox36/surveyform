@@ -12,6 +12,7 @@
     <script src="semantic/dist/semantic.min.js"></script>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
     <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 <body>
     <h1 id="title" class="ui header centered">Take the survey or else!</h1>
@@ -33,7 +34,7 @@
                     
                     <div class="inline required field">
                         <label id="number-label">Age:</label>
-                        <input type="number" id="number" placeholder="your age">
+                        <input type="number" id="number" placeholder="your age" max="100" min="1">
                     </div>
                     
                     <div class="field">
@@ -128,11 +129,7 @@
                         <textarea name="feedback" id="" cols="30" rows="10" placeholder="careful what ye say..."></textarea>
                     </div>
 
-                    <div class="ui submit button green">
-                        Submit
-                    </div>
-
-
+                    <div class="ui submit button green" id="submit">Submit</div>
             </div><!--//form-->
             </form>
     </div><!--container-->
