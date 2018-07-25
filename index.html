@@ -14,78 +14,127 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1 id="title" class="ui header centered">Please take our survey</h1>
-    <div class="ui container segment">
-        <div class="ui centered grid">
-            
-            <div class="ui form equal-width">
-                <h4 class="ui header center aligned">Let us know how we can improve pirating for you</h4>
-                
-                <div class="inline required field">
-                    <label>Name:</label>
-                    <input type="text">
-                </div>
-                
-                <div class="inline required field">
-                    <label>email:</label>
-                    <input type="email">
-                </div>
-                
-                <div class="inline required field">
-                    <label>Age:</label>
-                    <input type="number">
-                </div>
-                
-                <div class="field">
-                    <label for="role">Which option best describes your current role?</label>
-                    <select class="ui fluid dropdown" name="role" id="">
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="student">Cabin boy</option>
-                        <option value="ftJ">Captain</option>
-                        <option value="ftL">Deck hand</option>
-                        <option value="PNS">Gunner</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div><!--select-->
-                
-                <div class="grouped fields">
-                    <label for="recommend">How likely is that you would recommend pirating to a friend?</label>
+    <h1 id="title" class="ui header centered">Take the survey or else!</h1>
+    
+    <div class="ui container secondary left aligned segment">
+            <form id="survey-form">
+                <div class="ui form equal-width">
+                    <p class="ui header center aligned" id="description">Let us know how we can improve pirating for you</p>
+                    
+                    <div class="inline required field">
+                        <label id="name-label">Name:</label>
+                        <input type="text" id="name" placeholder="name">
+                    </div>
+                    
+                    <div class="inline required field">
+                        <label id="email-label">email:</label>
+                        <input type="email" id="email" placeholder="email@somewhere.com">
+                    </div>
+                    
+                    <div class="inline required field">
+                        <label id="number-label">Age:</label>
+                        <input type="number" id="number" placeholder="your age">
+                    </div>
                     
                     <div class="field">
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="recommend">
-                            <label for="">Arrr!!</label>
+                        <label for="role">Which option best describes your current role?</label>
+                        <select class="ui fluid dropdown" name="role" id="dropdown">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="student">Cabin boy</option>
+                            <option value="ftJ">Captain</option>
+                            <option value="ftL">Deck hand</option>
+                            <option value="PNS">Gunner</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div><!--select-->
+                    
+                    <div class="grouped fields">
+                        <label for="recommend">How likely is that you would recommend pirating to a friend?</label>
+                        
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="recommend">
+                                <label for="">Arrr!!</label>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="recommend">
+                                <label for="">Hmmmm...</label>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="recommend">
+                                <label for="">Grrrr!</label>
+                            </div>
+                        </div>
+                    </div><!--radios-->
+                    
+                    <div class="field">
+                        <label for="like">What do you like most about pirating?</label>
+                        <select class="ui fluid dropdown" name="like" id="">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="pizza">The free eye patch</option>
+                            <option value="beer">The free grog</option>
+                            <option value="cavort">The cavorting</option>
+                            <option value="hours">The free cutlasses</option>
+                        </select>
+                    </div><!--select-->
+
+                    <div class="grouped fields">
+                        <label for="improve">Select things that you think could be improved (check all that apply)</label>
+                        
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="improve" value="eyepatch">
+                                <label for="">Choice of eye patch</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="improve" value="weapon">
+                                <label for="">Choice of weapon</label>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="improve" value="workstation">
+                                <label for="">Workstation</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="improve" value="grog">
+                                <label for="">Grog rations</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="improve" value="seabiscuits">
+                                <label for="">Sea biscuits</label>
+                            </div>
+                        </div>
+                    </div><!--checkboxes-->
 
                     <div class="field">
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="recommend">
-                            <label for="">Hmmmm...</label>
-                        </div>
+                        <label for="feedback">Anything else t'say ye scurvy dog!</label>
+                        <textarea name="feedback" id="" cols="30" rows="10" placeholder="careful what ye say..."></textarea>
                     </div>
-                    
-                    <div class="field">
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="recommend">
-                            <label for="">Grrrr!</label>
-                        </div>
+
+                    <div class="ui submit button green">
+                        Submit
                     </div>
-                </div><!--radios-->
-                
-                <div class="field">
-                    <label for="like">What do you like most about pirating?</label>
-                    <select class="ui fluid dropdown" name="like" id="">
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="pizza">The free eye patch</option>
-                        <option value="beer">The free grog</option>
-                        <option value="cavort">The cavorting</option>
-                        <option value="hours">The free cutlasses</option>
-                    </select>
-                </div><!--select-->
+
 
             </div><!--//form-->
-        </div><!--//grid-->
+            </form>
     </div><!--container-->
 </body>
 </html>
