@@ -1,7 +1,4 @@
-.equal-width label{
-    min-width: 60px /* set this to max width of your label text */
-  }
 
 body {
-  background-color: dodgerblue;
+  background-color: aqua;
 }

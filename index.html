@@ -9,37 +9,40 @@
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 <body>
-    <h1 id="title" class="ui header centered">Take the survey or else!</h1>
+    <h1 id="title" class="text-center">Take the survey or else!</h1>
     
-    <div class="ui container secondary left aligned segment">
+    <div class="container bg-light text-center">
+            <p class="text-center" id="description">Let us know how we can improve pirating for you</p>
             <form id="survey-form">
-                <div class="ui form equal-width">
-                    <p class="ui header center aligned" id="description">Let us know how we can improve pirating for you</p>
-                    
-                    <div class="inline required field">
-                        <label id="name-label">Name:</label>
-                        <input type="text" id="name" placeholder="name">
+                <div class="form-group row">
+                    <label for="name" class="col-sm-5 col-form-label text-sm-right" id="name-label">Name:</label>
+                    <div class="col-sm-4">
+                    <input type="text" class="form-control" id="name" placeholder="your name" required>
                     </div>
-                    
-                    <div class="inline required field">
-                        <label id="email-label">email:</label>
-                        <input type="email" id="email" placeholder="email@somewhere.com">
+                </div>
+
+                <div class="form-group row">
+                    <label for="email" class="col-sm-5 col-form-label text-sm-right" id="email-label">Email:</label>
+                    <div class="col-sm-4">
+                    <input type="email" class="form-control" id="email" placeholder="as if pirates have email!" required>
                     </div>
-                    
-                    <div class="inline required field">
-                        <label id="number-label">Age:</label>
-                        <input type="number" id="number" placeholder="your age" max="100" min="1">
+                </div>
+
+                <div class="form-group row">
+                    <label for="age" class="col-sm-5 col-form-label text-sm-right" id="number-label">Age:</label>
+                    <div class="col-sm-4">
+                    <input type="number" class="form-control" id="number" max="100" min="1" placeholder="your age">
                     </div>
-                    
-                    <div class="field">
-                        <label for="role">Which option best describes your current role?</label>
-                        <select class="ui fluid dropdown" name="role" id="dropdown">
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-5 col-form-label text-sm-right" for="role">Which option best describes your current role?</label>
+                    <div class="col-sm-4">    
+                    <select class="form-control" id="dropdown">
                             <option value="" disabled selected>Select an option</option>
                             <option value="student">Cabin boy</option>
                             <option value="ftJ">Captain</option>
@@ -47,91 +50,91 @@
                             <option value="PNS">Gunner</option>
                             <option value="Other">Other</option>
                         </select>
-                    </div><!--select-->
-                    
-                    <div class="grouped fields">
-                        <label for="recommend">How likely is that you would recommend pirating to a friend?</label>
-                        
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="recommend">
-                                <label for="">Arrr!!</label>
-                            </div>
-                        </div>
+                    </div>
+                </div>
 
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="recommend">
-                                <label for="">Hmmmm...</label>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-5 pt-0 text-sm-right">How likely is that you would recommend pirating to a friend?</legend>
+                        <div class="col-sm-4 text-sm-left">
+
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="recommend" id="gridRadios1" value="option1" checked>
+                            <label class="form-check-label" for="recommend">
+                                Arrr!
+                            </label>
                             </div>
-                        </div>
-                        
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="recommend">
-                                <label for="">Grrrr!</label>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="recommend" id="gridRadios2" value="option2">
+                            <label class="form-check-label" for="recommend">
+                                Hmmm...
+                            </label>
                             </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="recommend" id="gridRadios3" value="option3">
+                            <label class="form-check-label" for="recommend">
+                                Grrr!
+                            </label>
+                            </div>
+
                         </div>
-                    </div><!--radios-->
-                    
-                    <div class="field">
-                        <label for="like">What do you like most about pirating?</label>
-                        <select class="ui fluid dropdown" name="like" id="">
+                    </div>
+                </fieldset>
+
+                <div class="form-group row">
+                        <label class="col-sm-5 col-form-label text-sm-right" for="likes">What do you like most about pirating?</label>
+                        <div class="col-sm-4">    
+                        <select class="form-control" id="likes">
                             <option value="" disabled selected>Select an option</option>
                             <option value="pizza">The free eye patch</option>
                             <option value="beer">The free grog</option>
                             <option value="cavort">The cavorting</option>
                             <option value="hours">The free cutlasses</option>
-                        </select>
-                    </div><!--select-->
-
-                    <div class="grouped fields">
-                        <label for="improve">Select things that you think could be improved (check all that apply)</label>
-                        
-                        <div class="field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" name="improve" value="eyepatch">
-                                <label for="">Choice of eye patch</label>
-                            </div>
+                            </select>
                         </div>
-
-                        <div class="field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" name="improve" value="weapon">
-                                <label for="">Choice of weapon</label>
-                            </div>
-                        </div>
-                        
-                        <div class="field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" name="improve" value="workstation">
-                                <label for="">Workstation</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" name="improve" value="grog">
-                                <label for="">Grog rations</label>
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" name="improve" value="seabiscuits">
-                                <label for="">Sea biscuits</label>
-                            </div>
-                        </div>
-                    </div><!--checkboxes-->
-
-                    <div class="field">
-                        <label for="feedback">Anything else t'say ye scurvy dog!</label>
-                        <textarea name="feedback" id="" cols="30" rows="10" placeholder="careful what ye say..."></textarea>
                     </div>
 
-                    <div class="ui submit button green" id="submit">Submit</div>
-            </div><!--//form-->
+                <div class="form-group row">
+                    <div class="col-sm-5 text-sm-right">Select things that you think could be improved (check all that apply)</div>
+                    <div class="col-sm-7 text-sm-left">
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="improve" value="eyepatch">
+                            <label class="form-check-label">Choice of eye patch</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="improve" value="weapon">
+                            <label class="form-check-label">Choice of weapon</label>
+                        </div>
+                        
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="improve" value="workstation">
+                            <label class="form-check-label">Workstation</label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="improve" value="grog">
+                            <label class="form-check-label">Grog rations</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <div class="col-sm-5 text-sm-right">Any other comments to make ye scurvy sea dog?!</div>
+                    <div class="col-sm-7 text-sm-left">
+                        <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <p>
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                </p>
             </form>
     </div><!--container-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </body>
 </html>
